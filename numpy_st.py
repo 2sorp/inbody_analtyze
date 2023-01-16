@@ -1,25 +1,21 @@
 import numpy as np
 import pandas as pd
+import csv
 
-population_dict = {
-    'china': 141500,
-    'japan': 12718,
-    'korea': 5180,
-    'usa': 32676
-}
-population = pd.Series(population_dict)
+class Inbody:
+    def __init__(self,date,weight,smm,fat,bmr):
+        self.date=date
+        self.weight=weight
+        self.smm=smm
+        self.fat=fat
+        self.bmr=bmr
+        
 
-gdp_dict = {
-    'china': 1409250000,
-    'japan': 516700000,
-    'korea': 169320000,
-    'usa': 2041280000,
-}
-gdp = pd.Series(gdp_dict)
+history = [
+#    Inbody(input(),int(input()),int(input()),int(input()),int(input()))
+    Inbody(input(),int(input()),int(input()),int(input()),int(input())),
+    Inbody(input(),int(input()),int(input()),int(input()),int(input()))
+]
 
-country = pd.DataFrame({
-    'gdp': gdp,
-    'population': population
-})
-
-print(country)
+for history in history:
+    print(str(history))
